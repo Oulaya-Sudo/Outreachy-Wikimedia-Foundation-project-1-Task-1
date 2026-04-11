@@ -28,7 +28,9 @@
                 {"page_id": 6549130, "creation_date": "2021-04-10", "title": "Zezico Guajajara"},
             ];
 
-            data.forEach(item => {document.getElementById("results").innerHTML += `<p>Article "${item.title}" (Page ID ${item.page_id}) was created at ${item.creation_date}.</p>`;
+         data.forEach(item => {
+  let formattedDate = new Date(item.creation_date).toLocaleDateString('pt-BR');
+  document.getElementById("results").innerHTML += `<p>Article "${item.title}" (Page ID ${item.page_id}) was created at ${formattedDate}.</p>`;
 });
         </script>
         <script>
